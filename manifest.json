@@ -1,0 +1,24 @@
+{
+  "name": "Satirify",
+  "version": "1.0",
+  "permissions": ["tabs", "storage"],
+  "icons": {
+    "48": "icon-48.png"
+  },
+  "browser_action": {
+    "default_icon": "icon-48.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["input.css"],
+      "js": ["index.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "manifest_version": 2
+}
